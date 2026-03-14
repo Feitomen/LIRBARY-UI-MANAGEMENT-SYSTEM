@@ -1,0 +1,34 @@
+﻿/* base.css
+ * Assigned to: TBD (Global styles)
+ * Last updated: 2026-03-13
+ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --brand-900:#4d0000;
+    --brand-800:#5c0000;
+    --brand-700:#7b0000;
+    --brand-600:#8b0000;
+    --brand-500:#b30000;
+    --surface:#ffffff;
+    --surface-2:#f4f6f9;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+}
+
+body{
+    min-height:100vh;
+    color:var(--text);
+}
+
+:focus-visible{
+    outline:3px solid rgba(179,0,0,0.35);
+    outline-offset:2px;
+}

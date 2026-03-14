@@ -1,0 +1,133 @@
+/* dashboard-ui.css
+ * Assigned to: TBD (Dashboard UI polish)
+ * Last updated: 2026-03-13
+ */
+
+:root{
+  --dash-card-radius: 14px;
+}
+
+.dashboard-page .main-content{
+  padding: 28px;
+}
+
+.dashboard-page .topbar{
+  gap: 16px;
+}
+
+.dashboard-page .topbar h1{
+  letter-spacing: 0.2px;
+}
+
+.dashboard-page .nav-pills .nav-link{
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+}
+
+.dashboard-page .nav-pills .nav-link.active{
+  border-color: rgba(179,0,0,0.25);
+  background: rgba(179,0,0,0.08);
+  color: var(--brand-700);
+}
+
+.dashboard-page .card{
+  border-radius: var(--dash-card-radius);
+  border-color: var(--border);
+}
+
+.dashboard-kpi{
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.kpi-value{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 4px;
+  color: var(--brand-700);
+}
+
+.kpi-sub{
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chart-card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--dash-card-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.chart-card-header{
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chart-title{
+  font-weight: 700;
+  color: var(--text);
+}
+
+.chart-subtitle{
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.chart-card-body{
+  padding: 14px 16px 18px;
+  height: 340px;
+}
+
+.chart-card-body-sm{
+  height: 260px;
+}
+
+.analytics-metrics{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.metric{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: linear-gradient(180deg,#fff, #fafafa);
+}
+
+.metric-label{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.metric-value{
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 2px;
+  color: var(--text);
+  word-break: break-word;
+}
+
+/* Keep sidebar consistent with Bootstrap look */
+.dashboard-page .sidebar{
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 768px){
+  .dashboard-page .main-content{
+    padding: 18px;
+  }
+  .chart-card-body{
+    height: 300px;
+  }
+}
+

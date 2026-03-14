@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login - Pasig Catholic College Library System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+
+<div class="left-panel">
+
+<div class="logo-wrapper">
+    <div class="logo-summer">
+        <img src="https://storage.googleapis.com/oa_disk001/pcc/147/school_logo/1723516719-730.jpg" alt="PCC Logo" class="auth-logo">
+    </div>
+</div>
+    <h1>Pasig Catholic College</h1>
+    <h3>Library Management System</h3>
+    <p>Persons of Character and Competence</p>
+
+</div>
+
+    <div class="right-panel">
+
+        <!-- LOGIN -->
+        <div id="loginSection" class="form-section active">
+            <h2>Welcome Back</h2>
+
+            <div class="role-select">
+                <button class="role-btn" data-role="Student">Student</button>
+                <button class="role-btn" data-role="Admin">Admin</button>
+            </div>
+
+            <form id="loginForm">
+                <input type="hidden" id="loginRole">
+                <input type="text" id="loginUsername" name="username" placeholder="Username" autocomplete="username" required>
+                <div class="input-row">
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" autocomplete="current-password" required>
+                    <button type="button" class="toggle-password" data-toggle-password="loginPassword">Show</button>
+                </div>
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+
+            <p>Don't have an account?
+                <span id="showRegister" class="link-btn">Register</span>
+            </p>
+            <p class="mt-2">
+                <a href="index.html" class="link-btn">Back to Landing</a>
+            </p>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="registerSection" class="form-section">
+            <h2>Create Account</h2>
+
+            <form id="registerForm">
+                <input type="hidden" id="registerRole" value="Student">
+                <input type="text" id="regUsername" name="username" placeholder="Student ID / Username" autocomplete="username" required>
+                <input type="text" id="program" name="program" placeholder="Program / Section" autocomplete="organization" required>
+                <div class="input-row">
+                    <input type="password" id="regPassword" name="new-password" placeholder="Password" autocomplete="new-password" required>
+                    <button type="button" class="toggle-password" data-toggle-password="regPassword">Show</button>
+                </div>
+                <div class="strength">
+                    <div class="strength-bar"></div>
+                </div>
+                <div class="strength-text">Password strength: —</div>
+                <div class="input-row">
+                    <input type="password" id="confirmPassword" name="confirm-password" placeholder="Confirm Password" autocomplete="new-password" required>
+                    <button type="button" class="toggle-password" data-toggle-password="confirmPassword">Show</button>
+                </div>
+                <button type="submit" class="primary-btn">Register</button>
+            </form>
+            <p class="mt-2" style="color:#6b7280;font-size:12px;">Admin accounts are created by the system only.</p>
+
+            <p>Already have an account?
+                <span id="showLogin" class="link-btn">Login</span>
+            </p>
+            <p class="mt-2">
+                <a href="index.html" class="link-btn">Back to Landing</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/lms.core.js" defer></script>
+<script src="js/lms.auth.js" defer></script>
+<script src="js/lms.dashboard.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>
